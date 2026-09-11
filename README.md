@@ -1,254 +1,219 @@
-# Predicting High-Risk Borrowers
+# **Project Overview**
 
-> **A data analytics project, to predict loan repayment among low-income borrowers, using Python**
+### **Objective**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+The goal of this project is to predict whether a low-income borrower is likely to repay a loan or not. By studying patterns in income, expenditure, and past repayments, the project aims to help lenders make fair and confident loan decisions.
 
----
+### **Context**
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Problem Statement](#problem-statement)
-- [Key Findings](#key-findings)
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-- [Technologies Used](#technologies-used)
-- [Installation & Setup](#installation--setup)
-- [Analysis & Visualizations](#analysis--visualizations)
-- [Strategic Recommendations](#strategic-recommendations)
-- [Contact](#contact)
+Predicting loan repayment is challenging when borrowers lack formal credit histories ,the project analyzes borrower data to uncover patterns that can guide smarter lending decisions. This project simulates a fintech startup lending scenario . It focuses on understanding the factors that influence a borrower’s repayment behaviour. The goal of the project is to generate insights from data and help companies become aware of the defaulters well in advance. **⇱Read detailed context** 
 
----
+### Problem Statement
 
-##  Project Overview
+Lenders struggle to predict loan repayment among low-income borrowers due to irregular incomes and limited credit histories, leading to higher default risk and restricted access to credit for this segment.
 
-This project simulates a **fintech startup lending scenario** where the goal is to predict whether a low-income borrower is likely to repay a loan. In the absence of formal credit histories, the analysis focuses on understanding patterns in **income levels**, **income sources**, and **borrower demographics** to guide smarter, fairer lending decisions.
+### **Tools**
 
-### **Business Context**
-Microfinance institutions and NBFCs (Non-Banking Financial Companies) often struggle to assess creditworthiness for blue-collar workers and daily wage earners who lack traditional credit histories. This project provides data-driven insights to:
-- Reduce default rates by 30-40%
-- Create balanced Joint Liability Group (JLG) compositions
-- Implement progressive lending frameworks
-- Maintain sustainable NBFC partnerships
+I employed Python Libraries for this project , as they allow for powerful and reproducible analysis. I used random for data generation,  pandas for data manipulation and matplotlib or seaborn for creating charts.
 
----
+### **Methodologies**
 
-## Problem Statement
+Generated data for this project using python code .The data was loaded into the code, further it was cleaned and analyzed using EDA( Exploratory Data Analysis) and in the end the data was visualized.
 
-**Challenge:** Lenders struggle to predict loan repayment among low-income borrowers due to:
-- Irregular income patterns
-- Limited or no credit histories
-- High default risk perception
-- Restricted access to formal credit
+# **The Approach and Process**
 
-**Solution:** Analyze borrower data (income, employment type, demographics) to uncover patterns that indicate repayment behavior and default risk.
+Since the detailed credit histories or prior loan data was unavailable, it was important to deeply understand the available information about borrowers- their income levels, job types, and loan behavior. To tackle the problem, I first generated a realistic dataset representing GramBond’s borrowers. Then, I cleaned the data to handle missing or inconsistent values, followed by exploring and visualizing it through EDA to uncover patterns that can not be seen at first glance. Each step helped move closer to understanding which borrower segments are most at risk.
 
----
+### Process
 
-##  Key Findings
-
-### **1. Income Level: The Primary Risk Factor**
-- **Low-income borrowers:** 40% default rate
-- **Medium-income borrowers:** 20% default rate  
-- **High-income borrowers:** 10% default rate
-
-### **2. Income Source Significantly Impacts Risk**
-- **Highest Risk:** Daily wage earners (unstable income)
-- **Moderate Risk:** Small business owners, commission earners
-- **Lowest Risk:** Salaried employees, pension holders
-
-### **3. Age & Repayment Correlation**
-- Middle-aged borrowers (36-55 years) show better repayment behavior
-- Younger borrowers (18-35) have higher default proportions
-- Repayment reliability improves with age
-
-### **4. Loan Amount Patterns**
-- Defaulters and non-defaulters borrow similar amounts
-- **Critical insight:** Low-income borrowers taking larger loans = higher risk
-- Loan amount alone is NOT a strong predictor
-
----
-
-##  Dataset
+- Data Generation
+- Data Loading
+- Data Exploration
+- Data Cleaning
+- Exploratory Data Analysis( EDA)
+    - Univariate Analysis
+    - Bivariate Analysis
+    - Multivariate Analysis
+- Final Conclusion and Recommendations
 
 ### **Data Generation**
-Since actual credit data was unavailable, a realistic synthetic dataset of **5,000 borrowers** was generated using Python libraries (`pandas`, `numpy`, `random`).
 
-### **Dataset Features**
+The initial step involved generating synthetic data using Python libraries like random, pandas, NumPy to simulate real-world dataset. The dataset has the following columns-
 
-| Column | Description | Type |
-|--------|-------------|------|
-| `Age` | Borrower's age (18-65 years) | Integer |
-| `Loan_Amount` | Sanctioned loan amount (₹10,000 - ₹50,000) | Integer |
-| `Income_Level` | Categorized income (Low/Medium/High) | Categorical |
-| `Income_Source` | Primary income source | Categorical |
-| `Default_Status` | Loan repayment outcome (Paid/Default) | Binary |
+- **Age**: The age of the borrower **(in years)**
+- **Loan_Amount**: The total loan amount sanctioned to the borrower **( in INR)**
+- **Income_Level:** Categorized income range of the borrower as **Low, Medium or High**
+- **Income_Source**: The primary source of income such as **Daily Wage, Salary, Small Business, Pension, or Commission**, showing the nature of earnings.
+- **Default_Status**: The repayment status, whether the borrower **paid** the loan or **defaulted**
 
-### **Income Source Categories**
-- Daily Wage (35%)
-- Salary (40%)
-- Small Business (15%)
-- Pension (5%)
-- Commission (5%)
 
-### **Default Logic Simulation**
-- Low income + Daily wage: 40% default probability
-- Low income (other sources): 25% default probability
-- Medium income: 15% default probability
-- High income: 5% default probability
 
----
+### Data Exploration
 
-##  Methodology
+In order to understand what the dataset actually contains, data exploration can be really helpful. It can help in identifying the missing or inconsistent information early. The data exploration phase ensures that further cleaning and analysis are based on a clear understanding of what’s actually inside the dataset.
 
-### **Step-by-Step Process**
-```
-1. Data Generation → 2. Data Loading → 3. Data Exploration → 
-4. Data Cleaning → 5. Exploratory Data Analysis (EDA) → 6. Insights & Recommendations
-```
+image
 
-### **1. Data Generation**
-- Created 5,000 synthetic borrower records
-- Incorporated realistic default probabilities based on income patterns
+From the summary statistics, the average age of borrowers is around 41 years, indicating that the dataset mainly represents an active working population. The average loan amount is approximately ₹29779 which is consistent with micro-loans typically offered to blue-collar workers. These averages validate that the generated data aligns with realistic lending patterns for this segment.
 
-### **2. Data Cleaning**
-- Removed missing values and duplicates
-- Standardized text entries (lowercase, trimmed spaces)
-- Validated age ranges (18-65 years)
-- Ensured data type consistency
+### **Data Cleaning**
 
-### **3. Exploratory Data Analysis (EDA)**
+I cleaned the data by handling missing values, removing duplicates, and ensuring consistent data types. Logical checks were also applied to verify that all records represented valid borrower profiles (e.g., age above 18, positive loan amounts). This ensured that further analysis and insights were based on accurate, realistic data. 
 
-#### **Univariate Analysis**
-- Age distribution across borrowers
-- Loan amount distribution patterns
-- Income source and level distributions
-- Default vs. Paid status breakdown
+### **Exploratory Data Analysis (EDA)**
 
-#### **Bivariate Analysis**
-- Income Level vs. Default Status
-- Income Source vs. Default Status  
-- Age Groups vs. Default Status
+Exploratory Data Analysis (EDA) helps us find patterns and insights in the data. It’s done by looking at the data in three ways , **univariate** **analysis** (examining one variable at a time), **bivariate analysis** (comparing two variables), and **multivariate analysis** (examining many variables together). The purpose of this analysis is to understand who our customers are and how they repay their loans. By looking at details like their age, income level, and main source of income, we want to find patterns that show why some people are more likely to default than others.
 
-#### **Multivariate Analysis**
-- Income Level vs. Income Source vs. Default patterns
-- Income Level vs. Loan Amount vs. Default risk
-- Identified complex risk combinations
+### **1. Univariate Analysis**
 
----
+ In this step, I looked at each variable one by one to understand how the data is spread and if there are any unusual values. This helps to spot outliers, see basic patterns like borrower income or age range, and get a first idea of the data before comparing different variables with each other. 
 
-##  Technologies Used
+- **Age Distribution:**
 
-| Technology | Purpose |
-|------------|---------|
-| **Python 3.8+** | Core programming language |
-| **pandas** | Data manipulation and analysis |
-| **NumPy** | Numerical computations |
-| **Matplotlib** | Data visualization |
-| **Seaborn** | Statistical visualizations |
+
+
+!image.png
+
+**Interpretation-** The age distribution of borrowers appears relatively uniform across all age ranges between 18 and 65, suggesting that lending activity is spread evenly across generations. There are mild peaks around the early 20s and early 60s, which may indicate that both younger individuals beginning their financial journey and older borrowers approaching retirement are actively seeking loans. Overall, the dataset reflects a well-balanced mix of borrowers across different age groups.
+
+- **Loan Amount Distribution**
+
+
+!image.png
+
+**Interpretation**: Borrowers are fairly evenly distributed across loan amounts, with minor fluctuations. There is no strong skew or concentration at a particular loan amount, indicating a fairly uniform loan distribution.
+
+- **Income Source Distribution**
+
+
+
+!image.png
+
+**Interpretation**: The plot suggests that the number of people that take loans are in this order ,salaried followed by daily wage earners followed by small business who are then followed by commission and least borrowers are from pension group.
+
+- **Income Level Distribution**
+
+
+
+!image.png
+
+**Interpretation**: Around 40% of the borrowers belong to the low-income category, another 40% to the medium group, and around 20% to the high-income group. The percentage mentioned here is an approximate estimate not the exact numbers.
+
+- **Default Status Distribution**
+
+
+
+!image.png
+
+**Interpretation:** The above plot shows that out of the whole dataset nearly 3600 people have paid back there loans and around 1250 people have defaulted over there loans. Above mentioned numbers are just an approximation from what can be interpreted from the graph.
 
 ---
 
-##  Installation & Setup
+### **2. Bivariate Analysis**
 
-### **Prerequisites**
-- Python 3.8 or higher
-- pip package manager
+Bivariate Analysis helps explore how two variables relate to each other. For example, how income level affects loan default rate, or how age connects with loan amount. This step adds context to the findings and helps uncover meaningful patterns that univariate analysis might have missed.
 
-##  Analysis & Visualizations
+- **Income_Level vs Default_Status**
 
-### **Key Visualizations Created:**
 
-1. **Age Distribution of Borrowers**
-   - Uniform distribution across 18-65 age range
-   - Peaks in early 20s and early 60s
 
-2. **Default Status by Income Level**
-   - Clear negative correlation between income and default rate
+!image.png
 
-3. **Default Patterns by Income Source**
-   - Daily wage earners show highest defaults
-   - Salaried/Pension holders show lowest defaults
+**Interpretation:** The chart shows that low-income borrowers have a visibly higher number of defaults compared to medium and high-income groups. This indicates a clear negative relationship between income level and repayment reliability.
 
-4. **Multivariate Analysis**
-   - Combination of low income + daily wage = highest risk
-   - High income borrowers rarely default regardless of source
+- **Income_Source vs Default_Status**
+    
+   
+    
 
-5. **Loan Amount by Income & Default Status**
-   - Defaulters take slightly higher loans within each category
-   - Loan size impact varies by income level
+!image.png
 
----
+**Interpretation:** The chart shows how different income sources affects the default status when loan is taken. We can conclude from the above chart that -
 
-##  Strategic Recommendations
+low-income borrowers have a visibly higher number of defaults compared to medium and high-income groups. This indicates a clear negative relationship between income level and repayment reliability.
 
-### **1. Intelligent Group Composition (JLG Strategy)**
--  Mix borrowers across income levels and sources
--  Avoid clustering all high-risk members together
--  Exercise caution with pension and commission earners
--  Don't form groups entirely of daily wage and low-income borrowers
+1. Borrowers with stable income sources ( salary, pension) have lower default rates.
+2. Daily wage earners, due to unstable source of income, have highest default rates.
+3. Small business have moderate risk while commission based earners( although a small group) shows some defaults.
 
-### **2. Risk-Based Scoring Model**
-**Proposed Formula:**
-```
-Group Risk Score = (Income Level × 45%) + (Income Source × 30%) + (Loan-to-Income Ratio × 25%)
-```
+- **Age vs Default_Status**
+   
 
-**Risk Thresholds:**
-- **Low Risk (0-30):** Approve with standard terms
-- **Medium Risk (31-60):** Approve with monitoring
-- **High Risk (61-100):** Decline or require collateral
+!image.png
 
-### **3. Early Warning System**
-- Send payment reminders to **entire group**, not just individuals
-- Enable group communication via mobile app
-- Notify group members **before** defaults occur
-- Leverage peer accountability
+**Interpretation:** The chart shows the number of borrowers in each age group (18–25, 26–35, etc.) and their loan repayment status (Paid vs Defaulted). We can conclude from the above chart that-
 
-### **4. Progressive Lending Framework**
-- Groups with on-time payments → Higher loan limits
-- Zero defaults → Lower interest rates
-- 6+ months good behavior → Individual loan eligibility
-- Default → Group restrictions + financial counseling
-
-**Expected Impact:** 30-40% reduction in default rates
-
-### **5. Targeted Interventions**
-- **Daily wage earners:** Shorter loan tenures aligned with wage cycles
-- **Low income borrowers:** Start with smaller amounts (₹10k-₹20k)
-- **Young borrowers (18-35):** Mandatory financial literacy training
-- **High-risk groups:** Bi-weekly check-ins instead of monthly
+1. Middle-aged borrowers (36–55) are more likely to repay loans. 
+2. Younger borrowers (18–35) have a higher proportion of defaults compared to their total loans. 
+3. Age seems to influence repayment behavior, with repayment improving as borrowers get older.
 
 ---
 
-##  Project Impact
+### **3. Multivariate Analysis**
 
-| Metric | Value |
-|--------|-------|
-| Dataset Size | 5,000 borrowers |
-| Overall Default Rate | 25% |
-| High-Risk Segment Default Rate | 40% |
-| Low-Risk Segment Default Rate | 10% |
-| **Expected Default Reduction** | **30-40%** |
+In this step, I explored how multiple factors together affect loan repayment. This helps identify deeper patterns like which combination of income level and source makes someone more likely to default.
+
+- **Income Source vs Income Level vs Default Status**
+
+
+!image.png
+
+**Interpretation:** The above multivariate analysis charts show that-
+
+1. People with **regular jobs or pensions** mostly **pay back their loans on time**. 
+2. Those with **daily wages or small businesses** **miss payments more often**, especially when their income is low or medium. 
+3.  Borrowers with **higher income** are **less likely to default**. Simply put, **steady and higher income means fewer chances of defaulting**. 
+
+- **Income Level vs Loan Amount vs Default Status**
+
+
+
+!image.png
+
+**Interpretation:** The above chart shows loan amounts for different income groups: High, Medium, and Low. Each group is split into people who paid back their loan and people who defaulted. People who **defaulted** usually took slightly **higher loans**. Higher loans in low and medium incomes are more likely to default.
 
 ---
 
-##  Acknowledgments
+# Final Conclusions and Recommendations
 
-- Inspired by real-world microfinance challenges in India
-- Dataset generation methodology adapted from fintech industry practices
-- JLG lending concepts from NBFC best practices
+### Key Findings
 
----
+1. **Income level is the biggest risk factor**
+- Low-income borrowers default 40% of the time
+- Medium-income borrowers default around 20% of the time
+- High-income borrowers default the least with 10% of the time only.
+1. **Income source matters a lot**
+- Daily-wage earners have the highest default rates followed by pension holders.
+- Salary and small business owners repay better.
+1. **Loan amounts don’t tell the full story**
+- Defaulters and loan payers both borrow the similar amount.
+- But low-income people taking larger loans are riskier.
 
-## ⭐ If You Found This Helpful
+### Strategic Recommendations
 
-Please consider giving this repository a ⭐ star!
+**1. Intelligent Group Composition** 
 
----
+- Avoid clustering all high-risk borrowers together
+- Integrate various income levels and sources within each JLG group
+- Exercise heightened caution with pension and commission earners
 
-<div align="center">
+**2. Group Risk Assessment** 
 
+- Assess the collective risk for the entire group rather than individual members
+- Disallow groups with an excessive number of high-risk individuals
+- Formula: Income Level (45%) + Income Source (30%) + Loan/Income Ratio (25%)
 
-</div>
+ 3**. Utilize Social Pressure Early On** 
+
+- Dispatch payment reminders to the entire group instead of just individuals
+- Facilitate group communication via the app
+- Notify the group prior to any defaults occurring so they can take action
+
+ 4**. Progressive Lending Framework** 
+
+- Groups that perform well gain access to larger amounts and improved rates
+- This fosters trust and encourages responsible repayment behavior
+
+### **Conclusion**
+
+**Income level** along with **income source** serve as GramBond's most reliable indicators in the absence of credit history. Leverage this information to create well-balanced JLG groups, establish prudent loan limits, and promote group accountability from the outset. This strategy is expected to decrease defaults by 30-40% while continuing to support blue-collar workers and preserving robust NBFC partnerships for sustainable growth.
