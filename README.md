@@ -30,7 +30,7 @@ Since the detailed credit histories or prior loan data was unavailable, it was i
 - [Data Loading](#Data-Loading)
 - [Data Exploration](#Data-Exploration)
 - [Data Cleaning](Data-Cleaning)
-- [Exploratory Data Analysis (EDA)](#Exploratory-Data-Analysis-(EDA))
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-(eda))
     - [1. Univariate Analysis](#1.-Univariate-Analysis)
     - [2. Bivariate Analysis](#2-.-Bivariate-Analysis)
     - [Multivariate Analysis](#Multivariate-Analysis)
