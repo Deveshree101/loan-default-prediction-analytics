@@ -6,7 +6,7 @@ The goal of this project is to predict whether a low-income borrower is likely t
 
 ### **Context**
 
-Predicting loan repayment is challenging when borrowers lack formal credit histories ,the project analyzes borrower data to uncover patterns that can guide smarter lending decisions. This project simulates a fintech startup lending scenario . It focuses on understanding the factors that influence a borrower’s repayment behaviour. The goal of the project is to generate insights from data and help companies become aware of the defaulters well in advance. **⇱Read detailed context** 
+Predicting loan repayment is challenging when borrowers lack formal credit histories ,the project analyzes borrower data to uncover patterns that can guide smarter lending decisions. This project simulates a fintech startup lending scenario . It focuses on understanding the factors that influence a borrower’s repayment behaviour. The goal of the project is to generate insights from data and help companies become aware of the defaulters well in advance. [Read Detailed Context](Detailed_Context.md)
 
 ### Problem Statement
 
