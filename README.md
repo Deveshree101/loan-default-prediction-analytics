@@ -46,6 +46,10 @@ The initial step involved generating synthetic data using Python libraries like 
 - **Income_Source**: The primary source of income such as **Daily Wage, Salary, Small Business, Pension, or Commission**, showing the nature of earnings.
 - **Default_Status**: The repayment status, whether the borrower **paid** the loan or **defaulted**
 
+### Data Loading
+
+The CSV file was then loaded into Python for data analysis by using the Python library pandas.
+
 
 
 ### Data Exploration
