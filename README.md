@@ -34,7 +34,7 @@ Since the detailed credit histories or prior loan data was unavailable, it was i
     - [Univariate Analysis](#Univariate-Analysis)
     - [Bivariate Analysis](#Bivariate-Analysis)
     - [Multivariate Analysis](#Multivariate-Analysis)
-- [Final Conclusion and Recommendations](#Final Conclusion and Recommendations)
+- [Final Conclusion and Recommendations](#Final-Conclusion-and-Recommendations)
 
 ### **Data Generation**
 
