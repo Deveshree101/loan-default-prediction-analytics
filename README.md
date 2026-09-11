@@ -207,13 +207,13 @@ In this step, I explored how multiple factors together affect loan repayment. Th
 - Disallow groups with an excessive number of high-risk individuals
 - Formula: Income Level (45%) + Income Source (30%) + Loan/Income Ratio (25%)
 
- 3**. Utilize Social Pressure Early On** 
+ **3. Utilize Social Pressure Early On** 
 
 - Dispatch payment reminders to the entire group instead of just individuals
 - Facilitate group communication via the app
 - Notify the group prior to any defaults occurring so they can take action
 
- 4**. Progressive Lending Framework** 
+ **4. Progressive Lending Framework** 
 
 - Groups that perform well gain access to larger amounts and improved rates
 - This fosters trust and encourages responsible repayment behavior
