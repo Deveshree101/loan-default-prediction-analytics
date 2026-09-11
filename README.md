@@ -27,7 +27,7 @@ Since the detailed credit histories or prior loan data was unavailable, it was i
 ### Process
 - [Data Generation](#Data-Generation)
 
-- [Data Loading](#Data-Loading]
+- [Data Loading](#Data-Loading)
 - [Data Exploration](#Data-Exploration)
 - [Data Cleaning](Data-Cleaning)
 - [Exploratory Data Analysis](#EDA)
