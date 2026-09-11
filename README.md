@@ -27,13 +27,13 @@ Since the detailed credit histories or prior loan data was unavailable, it was i
 ### Process
 - [Data Generation](#Data-Generation)
 
-- Data Loading
-- Data Exploration
-- Data Cleaning
-- Exploratory Data Analysis( EDA)
-    - Univariate Analysis
-    - Bivariate Analysis
-    - Multivariate Analysis
+- [Data Loading](#Data-Loading]
+- [Data Exploration](#Data-Exploration)
+- [Data Cleaning](Data-Cleaning)
+- [Exploratory Data Analysis](#EDA)
+    - [Univariate Analysis](#Univariate-Analysis)
+    - [Bivariate Analysis](#Bivariate-Analysis)
+    - [Multivariate Analysis](#Multivariate-Analysis)
 - Final Conclusion and Recommendations
 
 ### **Data Generation**
