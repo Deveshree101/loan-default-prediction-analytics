@@ -25,8 +25,8 @@ Generated data for this project using python code .The data was loaded into the 
 Since the detailed credit histories or prior loan data was unavailable, it was important to deeply understand the available information about borrowers- their income levels, job types, and loan behavior. To tackle the problem, I first generated a realistic dataset representing GramBond’s borrowers. Then, I cleaned the data to handle missing or inconsistent values, followed by exploring and visualizing it through EDA to uncover patterns that can not be seen at first glance. Each step helped move closer to understanding which borrower segments are most at risk.
 
 ### Process
+- [Data Generation](#Data Generation)
 
-- Data Generation
 - Data Loading
 - Data Exploration
 - Data Cleaning
