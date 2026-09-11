@@ -56,8 +56,6 @@ The CSV file was then loaded into Python for data analysis by using the Python l
 
 In order to understand what the dataset actually contains, data exploration can be really helpful. It can help in identifying the missing or inconsistent information early. The data exploration phase ensures that further cleaning and analysis are based on a clear understanding of what’s actually inside the dataset.
 
-image
-
 From the summary statistics, the average age of borrowers is around 41 years, indicating that the dataset mainly represents an active working population. The average loan amount is approximately ₹29779 which is consistent with micro-loans typically offered to blue-collar workers. These averages validate that the generated data aligns with realistic lending patterns for this segment.
 
 ### **Data Cleaning**
@@ -73,17 +71,15 @@ Exploratory Data Analysis (EDA) helps us find patterns and insights in the data.
  In this step, I looked at each variable one by one to understand how the data is spread and if there are any unusual values. This helps to spot outliers, see basic patterns like borrower income or age range, and get a first idea of the data before comparing different variables with each other. 
 
 - **Age Distribution:**
-
-
-
-!image.png
+<img width="708" height="484" alt="image" src="https://github.com/user-attachments/assets/e5fac26d-3507-4798-988e-d673cae08ae5" />
 
 **Interpretation-** The age distribution of borrowers appears relatively uniform across all age ranges between 18 and 65, suggesting that lending activity is spread evenly across generations. There are mild peaks around the early 20s and early 60s, which may indicate that both younger individuals beginning their financial journey and older borrowers approaching retirement are actively seeking loans. Overall, the dataset reflects a well-balanced mix of borrowers across different age groups.
 
 - **Loan Amount Distribution**
 
 
-!image.png
+<img width="708" height="484" alt="image" src="https://github.com/user-attachments/assets/8164dc5b-a2d2-40d0-b9fa-e5ae0fa705c5" />
+
 
 **Interpretation**: Borrowers are fairly evenly distributed across loan amounts, with minor fluctuations. There is no strong skew or concentration at a particular loan amount, indicating a fairly uniform loan distribution.
 
@@ -91,7 +87,8 @@ Exploratory Data Analysis (EDA) helps us find patterns and insights in the data.
 
 
 
-!image.png
+<img width="641" height="465" alt="image" src="https://github.com/user-attachments/assets/fce4d3fd-15ff-44b9-89a3-76b7ad816ff5" />
+
 
 **Interpretation**: The plot suggests that the number of people that take loans are in this order ,salaried followed by daily wage earners followed by small business who are then followed by commission and least borrowers are from pension group.
 
@@ -99,7 +96,8 @@ Exploratory Data Analysis (EDA) helps us find patterns and insights in the data.
 
 
 
-!image.png
+<img width="563" height="407" alt="image" src="https://github.com/user-attachments/assets/d7371651-e0f1-4bdc-a28b-cb03258e4773" />
+
 
 **Interpretation**: Around 40% of the borrowers belong to the low-income category, another 40% to the medium group, and around 20% to the high-income group. The percentage mentioned here is an approximate estimate not the exact numbers.
 
@@ -107,7 +105,8 @@ Exploratory Data Analysis (EDA) helps us find patterns and insights in the data.
 
 
 
-!image.png
+<img width="486" height="407" alt="image" src="https://github.com/user-attachments/assets/b26e884d-4ede-45f9-af14-0934e9e3afe5" />
+
 
 **Interpretation:** The above plot shows that out of the whole dataset nearly 3600 people have paid back there loans and around 1250 people have defaulted over there loans. Above mentioned numbers are just an approximation from what can be interpreted from the graph.
 
@@ -121,7 +120,8 @@ Bivariate Analysis helps explore how two variables relate to each other. For exa
 
 
 
-!image.png
+<img width="576" height="376" alt="image" src="https://github.com/user-attachments/assets/8a6aeb8c-8c0b-407c-a657-03c7d12a88e4" />
+
 
 **Interpretation:** The chart shows that low-income borrowers have a visibly higher number of defaults compared to medium and high-income groups. This indicates a clear negative relationship between income level and repayment reliability.
 
@@ -129,8 +129,8 @@ Bivariate Analysis helps explore how two variables relate to each other. For exa
     
    
     
+<img width="718" height="465" alt="image" src="https://github.com/user-attachments/assets/f82b8f9c-d57d-43ee-ae89-99692c4aec5d" />
 
-!image.png
 
 **Interpretation:** The chart shows how different income sources affects the default status when loan is taken. We can conclude from the above chart that -
 
@@ -143,7 +143,8 @@ low-income borrowers have a visibly higher number of defaults compared to medium
 - **Age vs Default_Status**
    
 
-!image.png
+<img width="576" height="376" alt="image" src="https://github.com/user-attachments/assets/ab54a1ce-9bd0-4c36-b48f-4438e671e6bd" />
+
 
 **Interpretation:** The chart shows the number of borrowers in each age group (18–25, 26–35, etc.) and their loan repayment status (Paid vs Defaulted). We can conclude from the above chart that-
 
@@ -159,8 +160,8 @@ In this step, I explored how multiple factors together affect loan repayment. Th
 
 - **Income Source vs Income Level vs Default Status**
 
+<img width="1480" height="980" alt="image" src="https://github.com/user-attachments/assets/f36fa56c-0aa0-480a-b47d-b0c1d98647d7" />
 
-!image.png
 
 **Interpretation:** The above multivariate analysis charts show that-
 
