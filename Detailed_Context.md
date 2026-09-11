@@ -18,5 +18,5 @@ There are certain challenges that **GramBond** faces that makes it difficult to 
 - **Diverse Borrower Demographics:** Borrowers vary widely in income, employment type, and financial literacy, requiring nuanced lending strategies.
 - **Market Education:** Many borrowers are new to digital lending platforms, making onboarding and trust-building important.
 
-All these factors makes it important for company ‘X’ to predict the risk profile for a customer before lending them loan. Also, if the credit history of the customer is unavailable , then it is important to make full use of data and make informed decisions.
+All these factors makes it important for GramBond to predict the risk profile for a customer before lending them loan. Also, if the credit history of the customer is unavailable , then it is important to make full use of data and make informed decisions.
 [Return to main page](README.md)
